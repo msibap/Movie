@@ -1,0 +1,6 @@
+.topbar {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: [icons-start] minmax(max-content, 1fr) [icons-end search-start] 2fr [search-end] 1fr;
+  background-color: $color-primary;
+}

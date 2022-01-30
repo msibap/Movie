@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  cursor: default;
+}
+
+body {
+  font-family: "Yekan", tahoma, sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [full-start] 1fr [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] 1fr [full-end];
+      grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+      grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+  -ms-grid-rows: 6rem calc(90vh - 6rem) 40vh auto;
+      grid-template-rows: 6rem calc(90vh - 6rem) 40vh auto;
+  grid-gap: 2px;
+  background-color: #e8fccf;
+  padding: 2rem;
+}
+
+.header {
+  grid-column: full-start / full-end;
+}
+
+.main {
+  grid-column: center-start / center-end;
+}
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+}
+
+.topbar {
+  grid-column: full-start / full-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [icons-start] minmax(max-content, 1fr) [icons-end search-start] 2fr [search-end] 1fr;
+      grid-template-columns: [icons-start] minmax(-webkit-max-content, 1fr) [icons-end search-start] 2fr [search-end] 1fr;
+      grid-template-columns: [icons-start] minmax(max-content, 1fr) [icons-end search-start] 2fr [search-end] 1fr;
+  background-color: #3e8914;
+}
+/*# sourceMappingURL=style.css.map */
