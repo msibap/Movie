@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Yekan", tahoma, sans-serif;
+  font-family: "kanit", sans-serif;
   display: grid;
   grid-template-columns:
     [full-start] 1fr [center-start] repeat(
@@ -24,10 +24,11 @@ body {
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] 1fr [full-end];
-  grid-template-rows: 6rem calc(90vh - 6rem) 40vh auto;
-  grid-gap: 2px;
-  background-color: $color-tertiary;
-  padding: 2rem;
+
+  // minmax(calc(100vh - (header+footer) - (3 * gap)))
+  grid-template-rows: 6rem minmax(calc(100vh - 12rem - 3rem), max-content) auto [footer-start] 6rem [footer-end];
+  grid-gap: 1rem;
+  background-color: $color-primary-dark;
 
   // min-height: 100vh;
   // border: 2rem solid $color-tertiary;

@@ -1,0 +1,5 @@
+.footer {
+  grid-column: full-start / full-end;
+  grid-row: footer-start / footer-end;
+  background-color: $color-primary;
+}

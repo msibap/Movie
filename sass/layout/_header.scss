@@ -1,3 +1,59 @@
 .header {
   grid-column: full-start / full-end;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-family: "PilotCommand";
+    color: $color-tertiary;
+    font-size: 2rem;
+    margin: 0 1rem;
+    min-width: max-content;
+  }
+
+  &__search {
+    @include flex-center;
+    width: 30rem;
+
+    &__field {
+      background-color: $color-tertiary;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-family: "kanit";
+      font-size: 1.6rem;
+      width: 70%;
+      border: none;
+      transition: all 0.5s ease;
+
+      &::placeholder {
+        color: $color-primary;
+      }
+
+      &:focus {
+        outline: none;
+        width: 100%;
+      }
+    }
+
+    &__btn {
+      background-color: transparent;
+      border: none;
+      transform: translateX(-3rem);
+
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      fill: $color-primary;
+    }
+  }
 }
