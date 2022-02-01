@@ -10,65 +10,31 @@
   <body>
     <header class="header">
       <div class="header__logo">MY MOVIE</div>
-      <div class="header__search">
+      <form id="form" class="header__search">
         <input
           type="text"
-          name="search"
+          id="search"
           class="header__search__field"
           placeholder="Search..."
         />
-        <button class="header__search__btn">
+        <button id="search-btn" class="header__search__btn">
           <svg class="header__search__icon">
             <use xlink:href="img/sprite.svg#icon-search"></use>
           </svg>
         </button>
-      </div>
+      </form>
     </header>
 
-    <main class="main">
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">5.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">2.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">5.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">7.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">1.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">11.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">11.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-      <div class="card">
-        <div class="card__image"></div>
-        <div class="card__rate">11.7</div>
-        <div class="card__name">Halo Infinte (2021)</div>
-      </div>
-    </main>
+    <main id="main" class="main"></main>
 
     <footer class="footer"></footer>
   </body>
   <script src="script.js"></script>
 </html>
+
+<!-- <div class="card">
+    <img src="img/img03.webp" alt="test" srcset="" class="card__image" />
+    <div id="cover" class="card__image"></div>
+    <div class="card__rate">5.7</div>
+    <div class="card__name">Halo Infinte (2021)</div>
+  </div> -->

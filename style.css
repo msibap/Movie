@@ -183,7 +183,8 @@ body {
 }
 
 .card__image {
-  background-image: url("img/img03.webp");
+  -o-object-fit: cover;
+     object-fit: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -194,7 +195,9 @@ body {
 }
 
 .card__name {
-  background-color: rgba(230, 57, 70, 0.7);
+  background-color: rgba(168, 218, 220, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   color: #f1faee;
   font-size: 2rem;
   z-index: 10;

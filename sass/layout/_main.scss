@@ -34,7 +34,8 @@
   }
 
   &__image {
-    background-image: url("img/img03.webp");
+    // background-image: url("img/img03.webp");
+    object-fit: cover;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +45,8 @@
   }
 
   &__name {
-    background-color: rgba($color-secondary, 0.7);
+    background-color: rgba($color-primary-light, 0.5);
+    backdrop-filter: blur(3px);
     color: $color-tertiary;
     font-size: 2rem;
     z-index: 10;
