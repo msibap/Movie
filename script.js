@@ -1,14 +1,21 @@
 "use strict";
 
+// const keyAPI = "k_rd431iza/";
+const keyAPI = "k_p16nc7jr/";
+
 const API_URL = "https://imdb-api.com";
-const TOP250_URL = API_URL + "/en/API/Top250Movies/k_rd431iza";
-const POPULAR_URL = API_URL + "/en/API/MostPopularMovies/k_rd431iza";
-const SEARCH_API = API_URL + "/en/API/SearchMovie/k_rd431iza/";
+const TOP250_URL = API_URL + "/en/API/Top250Movies/" + keyAPI;
+const POPULAR_URL = API_URL + "/en/API/MostPopularMovies/" + keyAPI;
+const COMINGSOON_URL = API_URL + "/en/API/ComingSoon/" + keyAPI;
+const SEARCH_API = API_URL + "/en/API/SearchMovie/" + keyAPI;
 
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const cover = document.getElementById("cover");
+const top250 = document.getElementById("top");
+const mostPopular = document.getElementById("most-popular");
+const comingSoon = document.getElementById("coming-soon");
 // const searchBtn = document.getElementById("search-btn");
 
 let requestOptions = {
@@ -16,7 +23,7 @@ let requestOptions = {
   redirect: "follow",
 };
 
-// getMovie(POPULAR_URL);
+getMovie(POPULAR_URL);
 
 async function getMovie(url) {
   let response = await fetch(url, requestOptions);
@@ -75,4 +82,16 @@ form.addEventListener("submit", function (event) {
   } else {
     window.location.reload();
   }
+});
+
+top250.addEventListener("click", function () {
+  getMovie(TOP250_URL);
+});
+
+mostPopular.addEventListener("click", function () {
+  getMovie(POPULAR_URL);
+});
+
+comingSoon.addEventListener("click", function () {
+  getMovie(COMINGSOON_URL);
 });
