@@ -1,21 +1,32 @@
 .header {
   grid-column: full-start / full-end;
   background-color: $color-primary;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   align-items: center;
 
   &__logo {
-    font-family: "PilotCommand";
-    color: $color-tertiary;
-    font-size: 2rem;
     margin: 0 1rem;
-    min-width: max-content;
+    width: max-content;
+    background-color: $color-primary-dark;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    justify-self: start;
+
+    & a {
+      font-family: "PilotCommand";
+      font-size: 2rem;
+      color: $color-tertiary;
+      text-decoration: none;
+    }
   }
 
   &__search {
     @include flex-center;
     width: 30rem;
+    transform: translateX(1rem);
 
     &__field {
       background-color: $color-tertiary;
@@ -54,6 +65,40 @@
       width: 2rem;
       height: 2rem;
       fill: $color-primary;
+    }
+  }
+
+  &__navbar {
+    background-color: $color-primary-dark;
+    justify-self: end;
+    margin: 0 1rem;
+    // padding: 0.5rem;
+    border-radius: 5px;
+    min-width: max-content;
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+
+    &__btn {
+      font-family: inherit;
+      font-size: 1.7rem;
+      color: $color-tertiary;
+      background: none;
+      border: none;
+      padding: 1rem 2rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: $color-tertiary;
+        color: $color-primary-dark;
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        border-right: 2px solid $color-tertiary;
+      }
     }
   }
 }

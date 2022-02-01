@@ -6,12 +6,26 @@
   justify-content: center;
   grid-gap: 1rem;
   padding: 0 1rem;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(auto-fit, 24rem);
+    grid-auto-rows: 34rem;
+  }
+  @media screen and (max-width: 765px) {
+    grid-template-columns: repeat(auto-fit, 18rem);
+    grid-auto-rows: 26rem;
+    padding: 0;
+  }
 }
 
 .card {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+
+  @media screen and (max-width: 510px) {
+    // border-radius: 0;
+  }
 
   &:hover &__image {
     transform: scale(1.05);
