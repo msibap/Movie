@@ -30,6 +30,17 @@ body {
   grid-gap: 1rem;
   background-color: $color-primary-dark;
 
+  @media screen and (max-width: 940px) {
+    grid-template-rows:
+      12rem minmax(calc(100vh - 18rem - 3rem), max-content)
+      auto [footer-start] 6rem [footer-end];
+  }
+  @media screen and (max-width: 650px) {
+    grid-template-rows:
+      18rem minmax(calc(100vh - 24rem - 3rem), max-content)
+      auto [footer-start] 6rem [footer-end];
+  }
+
   // min-height: 100vh;
   // border: 2rem solid $color-tertiary;
 }

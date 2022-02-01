@@ -7,13 +7,13 @@
   grid-gap: 1rem;
   padding: 0 1rem;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 940px) {
     grid-template-columns: repeat(auto-fit, 24rem);
     grid-auto-rows: 34rem;
   }
   @media screen and (max-width: 765px) {
-    grid-template-columns: repeat(auto-fit, 18rem);
-    grid-auto-rows: 26rem;
+    grid-template-columns: repeat(auto-fit, 17rem);
+    grid-auto-rows: 25rem;
     padding: 0;
   }
 }
@@ -59,7 +59,7 @@
   }
 
   &__name {
-    background-color: rgba($color-primary-light, 0.5);
+    background-color: rgba($color-primary, 0.75);
     backdrop-filter: blur(3px);
     color: $color-tertiary;
     font-size: 2rem;
