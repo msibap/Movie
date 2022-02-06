@@ -23,7 +23,7 @@ let requestOptions = {
   redirect: "follow",
 };
 
-getMovie(POPULAR_URL);
+// getMovie(POPULAR_URL);
 
 async function getMovie(url) {
   let response = await fetch(url, requestOptions);

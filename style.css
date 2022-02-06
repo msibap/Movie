@@ -244,7 +244,8 @@ body {
     grid-row: 2 / 3;
     -ms-grid-column-align: center;
         justify-self: center;
-    width: 90%;
+    width: 100%;
+    border-radius: 0;
   }
 }
 
@@ -257,11 +258,15 @@ body {
   padding: 1rem 2rem;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 @media screen and (max-width: 650px) {
   .header__navbar__btn {
     width: 100%;
+    padding: 1rem 0;
   }
 }
 
