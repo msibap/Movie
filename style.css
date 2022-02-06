@@ -358,9 +358,7 @@ body {
 }
 
 .card__name {
-  background-color: rgba(69, 123, 157, 0.75);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  background-color: rgba(69, 123, 157, 0.8);
   color: #f1faee;
   font-size: 2rem;
   z-index: 10;
@@ -368,5 +366,17 @@ body {
   padding: 1rem;
   position: absolute;
   bottom: 0;
+}
+
+@media screen and (max-width: 940px) {
+  .card__name {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .card__name {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
